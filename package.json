@@ -1,0 +1,20 @@
+{
+  "name": "phaser-percent-bar",
+  "version": "1.0.0",
+  "description": "This is part of the [Phaser Component Library](https://github.com/SaFrMo/phaser-component-library).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safrmo/phaser-percent-bar.git"
+  },
+  "keywords": ["phaser", "component"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safrmo/phaser-percent-bar/issues"
+  },
+  "homepage": "https://github.com/safrmo/phaser-percent-bar#readme"
+}
