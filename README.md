@@ -30,6 +30,8 @@ const healthBar = this.game.add.existing(new HealthBar({
 }))
 ```
 
+This will create a functioning, auto-updating health bar and attach it to the given sprite. When the sprite's health changes, the bar will update to reflect that.
+
 ## API
 
 ### `new PercentBar( { options } )`
