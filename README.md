@@ -38,12 +38,11 @@ This will create a functioning, auto-updating health bar and attach it to the gi
 
 #### options
 
-##### `barTint`
+##### `bgSprite`
 
-Type: `hex`<br>
-Default: `0x333333`
+Type: `string`
 
-Hex value of the tint of the percentage bar's background.
+Key to the desired sprite for the percent-bar background. Use `sprite` for setting this and `fgSprite` to the same sprite.
 
 ##### `bgTint`
 
@@ -51,6 +50,19 @@ Type: `hex`<br>
 Default: `0x00cc00`
 
 Hex value of the tint of the percentage bar's foreground (the bar itself).
+
+##### `fgSprite`
+
+Type: `string`
+
+Key to the desired sprite for the percent bar itself. Use `sprite` for setting this and `bgSprite` to the same sprite.
+
+
+##### `fgTint`
+
+Type: `hex`<br>
+Default: `0x333333`
+Hex value of the tint of the percentage bar's background.
 
 ##### `game`
 
@@ -72,6 +84,19 @@ Required<br>
 Type: `Phaser.Sprite`
 
 The parent sprite for this percentage bar.
+
+##### `resize`
+
+Type: `boolean`<br>
+Default: `false`
+
+If `false`, the bar will crop rather than growing or shrinking. If `true`, the bar will grow and shrink rather than cropping.
+
+##### `sprite`
+
+Type: `string`
+
+Shortcut to setting both `bgSprite` and `fgSprite`. Key of the sprite to use as the percentage bar.
 
 ##### `watch`
 
@@ -112,3 +137,8 @@ Type: `number`<br>
 Default: `-25`
 
 Number of pixels to offset from the host sprite.
+
+## Versions
+
+* `1.1.0` - Automatically centers bar to host on X axis. Added custom sprite support.
+* `1.0.0` - First release
