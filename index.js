@@ -68,7 +68,7 @@ export default class extends Phaser.Sprite {
 
 	update () {
 		super.update()
-		if (this.opts.watch) {
+		if (this.opts && this.opts.watch) {
 			const newWidth = this.bg.width * (this.opts.watch.host[this.opts.watch.value] / this.opts.watch.max)
 
 			if (this.opts.resize || (!this.opts.bgSprite && !this.opts.fgSprite)) {
