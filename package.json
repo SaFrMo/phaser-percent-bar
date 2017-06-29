@@ -1,6 +1,6 @@
 {
   "name": "phaser-percent-bar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "This is part of the [Phaser Component Library](https://github.com/SaFrMo/phaser-component-library).",
   "main": "index.js",
   "scripts": {
