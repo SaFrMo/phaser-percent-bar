@@ -23,6 +23,16 @@ export default class extends Phaser.Sprite {
 			opts.fgSprite = opts.sprite
 		}
 
+        // Prep watch, if unset
+		if (!opts.watch) {
+			opts.watch = {}
+		}
+
+        // Save watch.host, if unset
+		if (opts.watch && !opts.watch.host) {
+			opts.watch.host = opts.host
+		}
+
         // Save width
 		let width = 0
 		if (opts.bgSprite) {
@@ -46,7 +56,7 @@ export default class extends Phaser.Sprite {
 		}
 
         // Background to progress bar
-        const x = (opts.host.width / 2 - width / 2) + (opts.xOffset || 0)
+		const x = (opts.host.width / 2 - width / 2) + (opts.xOffset || 0)
 		this.bg = opts.host.addChild(this.game.make.sprite(x, opts.hasOwnProperty('yOffset') ? opts.yOffset : -25, opts.bgSprite || 'white1x1pixel'))
 		this.bg.width = width
 		this.bg.height = height
@@ -69,7 +79,7 @@ export default class extends Phaser.Sprite {
 	update () {
 		super.update()
 		if (this.opts && this.opts.watch) {
-			const newWidth = this.bg.width * (this.opts.watch.host[this.opts.watch.value] / this.opts.watch.max)
+			const newWidth = this.bg.width * (this.opts.watch.host[this.opts.watch.value || 'health'] / (this.opts.watch.max || this.opts.watch.host.maxHealth))
 
 			if (this.opts.resize || (!this.opts.bgSprite && !this.opts.fgSprite)) {
 				this.bar.width = newWidth

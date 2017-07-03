@@ -100,15 +100,13 @@ Shortcut to setting both `bgSprite` and `fgSprite`. Key of the sprite to use as 
 
 ##### `watch`
 
-Recommended<br>
-Type: `Object`<br>
-Default: none
+Type: `Object`
 
-The values that the percentage bar will represent. Requires the following properties:
+The values that the percentage bar will represent. Accepts the following properties:
 
-* `host` - Object containing the value to watch.
-* `value` - String with the name of the property to watch.
-* `max` - Number indicating the maximum value of the progress bar.
+* `host` - Object containing the value to watch (optional - default top-level `host`)
+* `value` - String with the name of the property to watch (optional - default `'health'`)
+* `max` - Number indicating the maximum value of the progress bar (optional - default `host.maxHealth`)
 
 Example implementation:
 
@@ -147,6 +145,7 @@ Number of pixels to offset from the host sprite vertically.
 
 ## Versions
 
+* `1.1.3` - Added defaults for `watch`
 * `1.1.2` - Added xOffset
 * `1.1.0` - Automatically centers bar to host on X axis. Added custom sprite support.
 * `1.0.0` - First release
