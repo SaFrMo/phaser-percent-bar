@@ -131,14 +131,22 @@ Default: `width` of `host`
 
 The width, in pixels, of the percentage bar.
 
+##### `xOffset`
+
+Type: `number`<br>
+Default: `0`
+
+Number of pixels to offset from the host sprite horizontally.
+
 ##### `yOffset`
 
 Type: `number`<br>
 Default: `-25`
 
-Number of pixels to offset from the host sprite.
+Number of pixels to offset from the host sprite vertically.
 
 ## Versions
 
+* `1.1.2` - Added xOffset
 * `1.1.0` - Automatically centers bar to host on X axis. Added custom sprite support.
 * `1.0.0` - First release

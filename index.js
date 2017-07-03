@@ -46,7 +46,7 @@ export default class extends Phaser.Sprite {
 		}
 
         // Background to progress bar
-		const x = opts.host.width / 2 - width / 2
+        const x = (opts.host.width / 2 - width / 2) + (opts.xOffset || 0)
 		this.bg = opts.host.addChild(this.game.make.sprite(x, opts.hasOwnProperty('yOffset') ? opts.yOffset : -25, opts.bgSprite || 'white1x1pixel'))
 		this.bg.width = width
 		this.bg.height = height
