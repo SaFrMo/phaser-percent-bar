@@ -21,12 +21,7 @@ sprite.maxHealth = 100
 // Create percentage bar as health bar
 const healthBar = this.game.add.existing(new HealthBar({
     game: this.game,
-    host: sprite,
-    watch: {
-        host: sprite,
-        value: 'health',
-        max: sprite.maxHealth
-    }
+    host: sprite
 }))
 ```
 
@@ -145,7 +140,7 @@ Number of pixels to offset from the host sprite vertically.
 
 ## Versions
 
-* `1.1.3` - Added defaults for `watch`
+* `1.1.31` - Added defaults for `watch` and updated readme
 * `1.1.2` - Added xOffset
 * `1.1.0` - Automatically centers bar to host on X axis. Added custom sprite support.
 * `1.0.0` - First release
