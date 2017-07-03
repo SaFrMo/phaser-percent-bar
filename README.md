@@ -138,8 +138,30 @@ Default: `-25`
 
 Number of pixels to offset from the host sprite vertically.
 
+#### Methods
+
+##### `hide()`
+
+Parameters: none
+
+Shortcut for `setAlpha(0)`.
+
+##### `setAlpha( newAlpha )`
+
+Parameters:
+* `newAlpha` (number) - new alpha value for percent bar components
+
+Set health bar components to a given opacity.
+
+##### `show()`
+
+Parameters: none
+
+Shortcut for `setAlpha(1)`.
+
 ## Versions
 
+* `1.1.4` - Added show, hide, and setAlpha functions
 * `1.1.31` - Added defaults for `watch` and updated readme
 * `1.1.2` - Added xOffset
 * `1.1.0` - Automatically centers bar to host on X axis. Added custom sprite support.

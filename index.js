@@ -76,6 +76,18 @@ export default class extends Phaser.Sprite {
 		this.opts = opts
 	}
 
+    show(){
+        this.setAlpha(1)
+    }
+
+    hide(){
+        this.setAlpha(0)
+    }
+
+    setAlpha(newAlpha){
+        this.bg.alpha = this.bar.alpha = newAlpha
+    }
+
 	update () {
 		super.update()
 		if (this.opts && this.opts.watch) {
