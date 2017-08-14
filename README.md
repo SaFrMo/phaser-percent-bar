@@ -161,6 +161,7 @@ Shortcut for `setAlpha(1)`.
 
 ## Versions
 
+* `1.1.5` - TypeScript definitions, tint bugfix (thanks @sohan)
 * `1.1.4` - Added show, hide, and setAlpha functions
 * `1.1.31` - Added defaults for `watch` and updated readme
 * `1.1.2` - Added xOffset
