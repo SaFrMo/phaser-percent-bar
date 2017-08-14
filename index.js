@@ -60,14 +60,14 @@ export default class extends Phaser.Sprite {
 		this.bg = opts.host.addChild(this.game.make.sprite(x, opts.hasOwnProperty('yOffset') ? opts.yOffset : -25, opts.bgSprite || 'white1x1pixel'))
 		this.bg.width = width
 		this.bg.height = height
-		this.bg.tint = opts.hasOwnProperty('bgTint') ? opts.tint : 0x333333
+		this.bg.tint = opts.hasOwnProperty('bgTint') ? opts.bgTint : 0x333333
 
         // Foreground
 		let fgSprite = opts.fgSprite || 'white1x1pixel'
 		this.bar = opts.host.addChild(this.game.make.sprite(x, opts.hasOwnProperty('yOffset') ? opts.yOffset : -25, fgSprite))
 		this.bar.width = width
 		this.bar.height = height
-		this.bar.tint = opts.hasOwnProperty('fgTint') ? opts.tint : 0x00cc00
+		this.bar.tint = opts.hasOwnProperty('fgTint') ? opts.fgTint : 0x00cc00
 
         // Crop
 		this.cropRect = new Phaser.Rectangle(0, 0, width, height)
